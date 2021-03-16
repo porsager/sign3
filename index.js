@@ -3,7 +3,7 @@ const qs = require('querystring')
 
 const hmac = (secret, x) => createHmac('sha256', secret)
   .update(x)
-  .digest('hex')
+  .digest()
 
 const hash = x => createHash('sha256')
   .update(x)
@@ -58,7 +58,7 @@ function sign({
   ].join('\n')
 
   const signature = [date, region, 's3', 'aws4_request', request]
-    .reduce((acc, x) => hmac(acc, x), 'AWS4' + password)
+    .reduce((acc, x) => hmac(acc, x), 'AWS4' + password).toString('hex')
 
   return protocol + '//' + host + '/' + bucket + '/' + key + '?' + queryString + '&X-Amz-Signature=' + signature
 }

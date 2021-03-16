@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Create pre-signed S3 URLs",
   "main": "index.js",
-  "type": "module",
   "author": "Rasmus Porsager <rasmus@porsager.com>",
   "license": "Unlicense",
   "repository": "porsager/sign3",

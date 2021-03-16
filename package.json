@@ -1,6 +1,6 @@
 {
   "name": "sign3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create pre-signed S3 URLs",
   "main": "index.js",
   "author": "Rasmus Porsager <rasmus@porsager.com>",

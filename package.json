@@ -1,0 +1,22 @@
+{
+  "name": "sign3",
+  "version": "0.0.1",
+  "description": "Create pre-signed S3 URLs",
+  "main": "index.js",
+  "type": "module",
+  "author": "Rasmus Porsager <rasmus@porsager.com>",
+  "license": "Unlicense",
+  "repository": "porsager/sign3",
+  "keywords": [
+    "aws",
+    "s3",
+    "sign",
+    "presign",
+    "presigned",
+    "presignedGetObject",
+    "presignedPutObject",
+    "getObject",
+    "uri",
+    "url"
+  ]
+}

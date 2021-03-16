@@ -7,6 +7,9 @@
   "author": "Rasmus Porsager <rasmus@porsager.com>",
   "license": "Unlicense",
   "repository": "porsager/sign3",
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "aws",
     "s3",

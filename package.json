@@ -3,12 +3,16 @@
   "version": "1.0.2",
   "description": "Create pre-signed S3 URLs",
   "main": "index.js",
+  "type": "module",
   "author": "Rasmus Porsager <rasmus@porsager.com>",
   "license": "Unlicense",
   "repository": "porsager/sign3",
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "test": "echo some day"
+  },
   "keywords": [
     "aws",
     "s3",

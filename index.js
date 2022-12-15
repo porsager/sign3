@@ -1,5 +1,5 @@
-const { createHmac, createHash } = require('crypto')
-const qs = require('querystring')
+import { createHmac, createHash } from 'crypto'
+import qs from 'querystring'
 
 const hmac = (secret, x) => createHmac('sha256', secret)
   .update(x)
@@ -9,7 +9,7 @@ const hash = x => createHash('sha256')
   .update(x)
   .digest('hex')
 
-module.exports = function sign3(url) {
+export default function sign3(url) {
   return {
     get: (bucket, key, expires, headers) => sign({ method: 'GET', url, bucket, key, expires, headers }),
     put: (bucket, key, expires, headers) => sign({ method: 'PUT', url, bucket, key, expires, headers })

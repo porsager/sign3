@@ -11,6 +11,7 @@ const hash = x => createHash('sha256')
 
 export default function sign3(url) {
   return {
+    head: (bucket, key, expires, headers) => sign({ method: 'HEAD', url, bucket, key, expires, headers }),
     get: (bucket, key, expires, headers) => sign({ method: 'GET', url, bucket, key, expires, headers }),
     put: (bucket, key, expires, headers) => sign({ method: 'PUT', url, bucket, key, expires, headers })
   }
@@ -26,7 +27,7 @@ function sign({
   region = 'us-east-1'
 }) {
   const { host, username, password, protocol } = new URL(url)
-      , header = method === 'GET' ? headers : {}
+      , header = method === 'PUT' ? {} : headers
       , iso = new Date().toISOString()
       , date = iso.slice(0, 4) + iso.slice(5, 7) + iso.slice(8, 10)
       , time = date + 'T' + iso.slice(11, 13) + iso.slice(14, 16) + iso.slice(17, 19) + 'Z'

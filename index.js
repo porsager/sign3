@@ -13,7 +13,8 @@ export default function sign3(url) {
   return {
     head: (bucket, key, expires, headers) => sign({ method: 'HEAD', url, bucket, key, expires, headers }),
     get: (bucket, key, expires, headers) => sign({ method: 'GET', url, bucket, key, expires, headers }),
-    put: (bucket, key, expires, headers) => sign({ method: 'PUT', url, bucket, key, expires, headers })
+    put: (bucket, key, expires, headers) => sign({ method: 'PUT', url, bucket, key, expires, headers }),
+    delete: (bucket, key, expires, headers) => sign({ method: 'DELETE', url, bucket, key, expires, headers })
   }
 }
 

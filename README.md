@@ -11,5 +11,11 @@ sign('https://accessKey:secretKey@endpoint').get(bucket, key, expiry, headers)
 
 sign('https://accessKey:secretKey@endpoint').put(bucket, key, expiry)
 // returns a presigned put url for upload
+ 
+sign('https://accessKey:secretKey@endpoint').head(bucket, key, expiry)
+// returns a presigned put url for head
+ 
+sign('https://accessKey:secretKey@endpoint').delete(bucket, key, expiry)
+// returns a presigned put url for delete
 
 ```
